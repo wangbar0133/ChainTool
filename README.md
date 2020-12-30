@@ -22,13 +22,14 @@ res = Account()  # 新建一个负责人
 
 ### 属性
 
-| userName      | 用户名                |
+| 属性          | 描述                  |
 | ------------- | --------------------- |
 | signingKey    | 签名密钥              |
 | VerifiyingKey | 验证密钥（25519对象） |
 | SigningKey    | 签名密钥（25519对象） |
+| userName      | 用户名                |
 
-## Block对象
+## 导入Block对象
 
 ```
 from chain import Block
@@ -38,10 +39,11 @@ newBlock = Block().CreateNewBlock(position=position, status=status, responsible=
 
 ### 属性
 
-| BlockJson                                                    | 块的json对象                                                 |
+| 属性                                                         | 描述                                                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | CreateNewBlock(self, position, status, responsible, BlockChain): | 函数，返回新块，传入position, status, responsible, BlockChain（BlockChain对象） |
 | PrintBlock                                                   | 函数，打印这个块                                             |
+| BlockJson                                                    | 块的json对象                                                 |
 
 ### BlockJson
 
@@ -70,7 +72,7 @@ newBlock = Block().CreateNewBlock(position=position, status=status, responsible=
 
 
 
-## BlockChain对象
+## 导入BlockChain对象
 
 ```
 from chain import BlockChain
@@ -80,10 +82,11 @@ newBlockChain = BlockChain()
 
 ### 属性
 
-| AddBlockToChain | 把块对象加入到链中     |
+| 属性            | 描述                   |
 | --------------- | ---------------------- |
 | PrintBlockChain | 打印整个链             |
 | GetChain        | 函数，返回整个链列表   |
 | ToFile          | 函数，保存到文件       |
 | FileTo          | 函数，从文件加载到对象 |
+| AddBlockToChain | 将Block对象加到链中    |
 
